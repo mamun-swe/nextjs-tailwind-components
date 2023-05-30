@@ -36,7 +36,7 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
       />
 
       {/* Content container */}
-      <div className="-mt-20 rounded-tl-3xl rounded-tr-3xl p-4 bg-white">
+      <div className="-mt-10 rounded-tl-3xl rounded-tr-3xl p-4 bg-white">
         {/* Title & owner */}
         <div className="flex mb-8">
           <div className="flex-grow">
