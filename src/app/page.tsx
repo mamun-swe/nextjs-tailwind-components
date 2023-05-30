@@ -27,7 +27,7 @@ export default function Home() {
                 banner="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241201.jpg"
                 duration="20hrs"
                 enrolled={20000}
-                fee={200}
+                fee={1500}
                 title="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
                 trainer_name="Jhon Sina"
                 trainer_image="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=60"

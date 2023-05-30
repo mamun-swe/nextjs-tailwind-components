@@ -1,5 +1,6 @@
 import { LuClock3 } from "react-icons/lu";
 import { FiUsers } from "react-icons/fi";
+import commaNumber from "comma-number";
 
 type CourseCardPropsTypes = {
   id: number;
@@ -62,12 +63,12 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
           </div>
           <div className="border px-2 py-1 rounded-md flex justify-between gap-2 text-gray-600 bg-gray-100">
             <FiUsers size={14} />
-            <p className="text-xs">{props.enrolled}+</p>
+            <p className="text-xs">{commaNumber(props.enrolled)}+</p>
           </div>
 
           <div className="border px-2 py-1 rounded-md flex justify-between gap-2 text-gray-600 bg-gray-100">
             <p className="text-xs">Fee:</p>
-            <p className="text-xs font-bold">{props.fee}tk</p>
+            <p className="text-xs font-bold">{commaNumber(props.fee)}tk</p>
           </div>
         </div>
 
