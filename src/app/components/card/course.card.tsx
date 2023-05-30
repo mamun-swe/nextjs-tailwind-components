@@ -28,14 +28,15 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
   };
 
   return (
-    <div className="relative cursor-pointer h-[405px] overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl bg-white">
+    <div className="cursor-pointer overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl">
       {/* Banner container */}
-      <div className="w-full h-60 overflow-hidden -z-30">
-        <img src={props.banner} alt="..." className="min-w-full min-h-full" />
-      </div>
+      <div
+        className="w-full h-60 overflow-hidden bg-cover"
+        style={{ backgroundImage: `url(${props.banner})` }}
+      />
 
       {/* Content container */}
-      <div className="absolute top-52 left-0 w-full rounded-tl-3xl z-40 rounded-tr-3xl p-4 bg-white">
+      <div className="-mt-20 rounded-tl-3xl rounded-tr-3xl p-4 bg-white">
         {/* Title & owner */}
         <div className="flex mb-8">
           <div className="flex-grow">
