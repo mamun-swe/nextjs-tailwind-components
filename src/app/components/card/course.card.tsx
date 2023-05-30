@@ -57,7 +57,7 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
         </div>
 
         {/* Course duration, Total enrolled & Pricing */}
-        <div className="flex flex-wrap justify-end gap-2 mb-3">
+        <div className="flex flex-wrap justify-end gap-2 mb-2">
           <div className="border px-[6px] py-1 rounded-md flex justify-between gap-2 text-gray-600 bg-gray-100">
             <LuClock3 size={14} />
             <p className="text-xs">{props.duration}</p>
