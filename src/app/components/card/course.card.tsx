@@ -27,7 +27,7 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
   };
 
   return (
-    <div className="relative cursor-pointer h-[400px] overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl bg-white">
+    <div className="relative cursor-pointer h-[405px] overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl bg-white">
       {/* Banner container */}
       <div className="w-full h-60 overflow-hidden -z-30">
         <img src={props.banner} alt="..." className="min-w-full min-h-full" />
@@ -55,7 +55,7 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
         </div>
 
         {/* Course duration, Total enrolled & Pricing */}
-        <div className="flex flex-wrap justify-end gap-2 mb-2">
+        <div className="flex flex-wrap justify-end gap-2 mb-3">
           <div className="border px-2 py-1 rounded-md flex justify-between gap-2 text-gray-600 bg-gray-100">
             <LuClock3 size={14} />
             <p className="text-xs">{props.duration}</p>
