@@ -2,21 +2,22 @@ import { ComponentBody } from "@/app/components/components-body";
 import { FullWidthCarousel } from "@/app/components/carousel/full-width.carousel";
 import { CourseCard } from "@/app/components/card/course.card";
 import { TeamCard } from "@/app/components/card/team.card";
+import { BlogCard } from "@/app/components/card/blog.card";
 
 export default function Home() {
   return (
     <main className="py-4">
       <div className="container">
         {/* Full width carousel slider */}
-        {/* <ComponentBody
+        <ComponentBody
           title="Full width carousel slider"
           description="Carousel component made with react-simply-carousel npm package."
         >
           <FullWidthCarousel />
-        </ComponentBody> */}
+        </ComponentBody>
 
         {/* Course card */}
-        {/* <ComponentBody
+        <ComponentBody
           title="Course card"
           description="Training course card component."
         >
@@ -35,7 +36,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </ComponentBody> */}
+        </ComponentBody>
 
         {/* Team card */}
         <ComponentBody title="Team card" description="Team card components">
@@ -51,6 +52,32 @@ export default function Home() {
                 facebook={"www.facebook.com"}
                 linkedin={"www.linkedin.com"}
                 twitter={"www.twitter.com"}
+              />
+            ))}
+          </div>
+        </ComponentBody>
+
+        {/* Blog Card */}
+        <ComponentBody
+          title="Full width carousel slider"
+          description="Carousel component made with react-simply-carousel npm package."
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {Array.from(Array(3).keys()).map((item) => (
+              <BlogCard
+                key={item}
+                id={item + 1}
+                banner="https://www.bristol.ac.uk/media-library/sites/engineering/computerscience/images/cs-research-module.jpg"
+                title="লরেম ইপ্সাম ডলর সিট আমেত, কনসেক্টেচুর অ্যাডিপিস্কিং এলিট। নানসি
+          আল্ট্রিচিস ভ্যারিয়াস আউগিউ ইউ ফ্যাউসিবাস।"
+                category={{ id: 1, title: "Category" }}
+                created_by={{
+                  id: 2,
+                  name: "Captain Jack Sparrow",
+                  image:
+                    "https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=60",
+                }}
+                created_at={"Jan 10, 2022"}
               />
             ))}
           </div>
