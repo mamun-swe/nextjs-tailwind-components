@@ -1,6 +1,7 @@
 import { ComponentBody } from "@/app/components/components-body";
 import { FullWidthCarousel } from "@/app/components/carousel/full-width.carousel";
 import { CourseCard } from "@/app/components/card/course.card";
+import { TeamCard } from "@/app/components/card/team.card";
 
 export default function Home() {
   return (
@@ -31,6 +32,25 @@ export default function Home() {
                 title="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
                 trainer_name="Jhon Sina"
                 trainer_image="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=60"
+              />
+            ))}
+          </div>
+        </ComponentBody>
+
+        {/* Team card */}
+        <ComponentBody title="Team card" description="Team card components">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {Array.from(Array(3).keys()).map((item) => (
+              <TeamCard
+                key={item}
+                id={item + 1}
+                name="Captain jack sparrow"
+                education="Harvard University"
+                job_title={"Boxer xyz"}
+                image="https://static.tvtropes.org/pmwiki/pub/images/sparrow_jack.jpg"
+                facebook={"www.facebook.com"}
+                linkedin={"www.linkedin.com"}
+                twitter={"www.twitter.com"}
               />
             ))}
           </div>
