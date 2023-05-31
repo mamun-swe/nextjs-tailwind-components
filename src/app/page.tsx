@@ -8,15 +8,15 @@ export default function Home() {
     <main className="py-4">
       <div className="container">
         {/* Full width carousel slider */}
-        <ComponentBody
+        {/* <ComponentBody
           title="Full width carousel slider"
           description="Carousel component made with react-simply-carousel npm package."
         >
           <FullWidthCarousel />
-        </ComponentBody>
+        </ComponentBody> */}
 
         {/* Course card */}
-        <ComponentBody
+        {/* <ComponentBody
           title="Course card"
           description="Training course card component."
         >
@@ -35,7 +35,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </ComponentBody>
+        </ComponentBody> */}
 
         {/* Team card */}
         <ComponentBody title="Team card" description="Team card components">

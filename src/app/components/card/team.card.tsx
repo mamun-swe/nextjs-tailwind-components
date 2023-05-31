@@ -23,7 +23,7 @@ export const TeamCard: React.FC<TeamCardPropsTypes> = (
     <div className="overflow-hidden rounded-xl border bg-white">
       {/* Banner container */}
       <div
-        className="w-full h-60 overflow-hidden bg-cover"
+        className="w-full h-72 overflow-hidden bg-cover"
         style={{ backgroundImage: `url(${props.image})` }}
       />
 
