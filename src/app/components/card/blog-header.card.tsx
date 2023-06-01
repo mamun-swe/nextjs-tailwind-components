@@ -28,17 +28,17 @@ export const BlogHeaderCard: React.FC<PropsTypes> = (
     <div className="overflow-hidden rounded-xl bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Banner */}
-        <div className="h-[400px] overflow-hidden">
+        <div className="h-[250px] md:h-[400px] overflow-hidden">
           <img
             src="https://img.freepik.com/premium-vector/fifa-world-cup-championship-2022-background-football-banner-gradient-color_633084-155.jpg"
             alt="..."
-            className="w-full min-h-[400px]"
+            className="w-full min-h-[250px] md:min-h-[400px]"
           />
         </div>
 
         {/* Content */}
-        <div className="p-4 lg:p-8">
-          <div className="mb-6">
+        <div className="p-0 pt-4 lg:p-8">
+          <div className="mb-4">
             <p className="text-md font-bold mb-3 text-gray-600">
               {props.title}
             </p>
