@@ -60,7 +60,7 @@ export const BlogDetailCard: React.FC<PropsTypes> = (
       </div>
 
       {/* Comment list */}
-      <div>
+      <div className="mt-6 lg:mt-0">
         {Array.from(Array(3).keys()).map((item) => (
           <CommentCard
             key={item}
