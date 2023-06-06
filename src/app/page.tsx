@@ -1,3 +1,5 @@
+"use client";
+
 import { ComponentBody } from "@/app/components/components-body";
 import { FullWidthCarousel } from "@/app/components/carousel/full-width.carousel";
 import { CourseCard } from "@/app/components/card/course.card";
@@ -5,6 +7,7 @@ import { TeamCard } from "@/app/components/card/team.card";
 import { BlogCard } from "@/app/components/card/blog.card";
 import { BlogHeaderCard } from "@/app/components/card/blog-header.card";
 import { BlogDetailCard } from "@/app/components/card/blog-detail.card";
+import { NewsLetterForm } from "@/app/components/form/newsletter.form";
 
 export default function Home() {
   return (
@@ -119,7 +122,7 @@ export default function Home() {
         </ComponentBody> */}
 
         {/* Blog detail card */}
-        <ComponentBody title="Detail" description="...">
+        {/* <ComponentBody title="Detail" description="...">
           <BlogDetailCard
             id={1}
             banner="https://www.bristol.ac.uk/media-library/sites/engineering/computerscience/images/cs-research-module.jpg"
@@ -139,7 +142,10 @@ export default function Home() {
             }}
             created_at={"Jan 10, 2022"}
           />
-        </ComponentBody>
+        </ComponentBody> */}
+
+        {/* Form */}
+        <NewsLetterForm />
       </div>
     </main>
   );
