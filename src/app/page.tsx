@@ -1,4 +1,3 @@
-
 import { ComponentBody } from "@/app/components/components-body";
 import { FullWidthCarousel } from "@/app/components/carousel/full-width.carousel";
 import { CourseCard } from "@/app/components/card/course.card";
@@ -8,6 +7,7 @@ import { BlogHeaderCard } from "@/app/components/card/blog-header.card";
 import { BlogDetailCard } from "@/app/components/card/blog-detail.card";
 import { NewsLetterForm } from "@/app/components/form/newsletter.form";
 import { CommentForm } from "@/app/components/form/comment.form";
+import { CourseDetailCard } from "@/app/components/card/course-detail.card";
 
 export default function Home() {
   return (
@@ -146,7 +146,8 @@ export default function Home() {
 
         {/* Form */}
         {/* <NewsLetterForm /> */}
-        <CommentForm />
+        {/* <CommentForm /> */}
+        <CourseDetailCard />
       </div>
     </main>
   );
