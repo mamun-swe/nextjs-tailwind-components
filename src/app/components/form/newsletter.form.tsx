@@ -1,13 +1,15 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import { isValidEmail } from "@/app/utils/helper";
+import { useState } from "react";
 
 type Inputs = {
   email: string;
 };
 
 const inputClass =
-  "w-full text-sm bg-white disabled:bg-gray-300 rounded-md outline-none p-4 border border-white pr-24";
+  "w-full text-xs bg-white disabled:bg-gray-300 rounded-[4px] outline-none p-4 border border-white pr-32";
 const inputErrorClass =
-  "w-full text-sm bg-white disabled:bg-gray-300 rounded-md outline-none p-4 border border-red-300 pr-24";
+  "w-full text-xs bg-white disabled:bg-gray-300 rounded-[4px] outline-none p-4 border border-red-300 pr-32";
 
 export const NewsLetterForm: React.FC = (): JSX.Element => {
   const {
@@ -15,24 +17,40 @@ export const NewsLetterForm: React.FC = (): JSX.Element => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const [isLoading, setLoading] = useState<boolean>(false);
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setLoading(true);
+    console.log(data);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
 
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="w-full rounded-md overflow-hidden relative bg-white">
+        <div className="w-full rounded-[4px] overflow-hidden relative bg-white">
           {/* email input field */}
           <input
-            {...register("email", { required: "E-mail is required." })}
+            placeholder="Enter your email"
+            {...register("email", {
+              required: true,
+              pattern: {
+                value: isValidEmail(),
+                message: "Invalid email address.",
+              },
+            })}
             className={errors.email ? inputErrorClass : inputClass}
           />
 
           {/* Submit button */}
           <button
             type="submit"
-            className="absolute top-[10px] right-2 rounded-md text-xs font-bold px-4 py-[10px] text-white bg-slate-400"
+            className="absolute top-[6px] right-[4px] rounded-[4px] text-xs font-medium px-6 pt-[11px] pb-[12px] text-white bg-primary disabled:bg-primarygray"
+            disabled={isLoading}
           >
-            Subscribe
+            {isLoading ? "Please Wait..." : "Subscribe Now"}
           </button>
         </div>
       </form>
