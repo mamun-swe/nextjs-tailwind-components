@@ -1,3 +1,5 @@
+"use client";
+
 import { useForm, SubmitHandler } from "react-hook-form";
 import { isValidEmail } from "@/app/utils/helper";
 import { useState } from "react";

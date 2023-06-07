@@ -1,4 +1,3 @@
-"use client";
 
 import { ComponentBody } from "@/app/components/components-body";
 import { FullWidthCarousel } from "@/app/components/carousel/full-width.carousel";
@@ -8,6 +7,7 @@ import { BlogCard } from "@/app/components/card/blog.card";
 import { BlogHeaderCard } from "@/app/components/card/blog-header.card";
 import { BlogDetailCard } from "@/app/components/card/blog-detail.card";
 import { NewsLetterForm } from "@/app/components/form/newsletter.form";
+import { CommentForm } from "@/app/components/form/comment.form";
 
 export default function Home() {
   return (
@@ -145,7 +145,8 @@ export default function Home() {
         </ComponentBody> */}
 
         {/* Form */}
-        <NewsLetterForm />
+        {/* <NewsLetterForm /> */}
+        <CommentForm />
       </div>
     </main>
   );
