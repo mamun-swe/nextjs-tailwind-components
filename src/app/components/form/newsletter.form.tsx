@@ -7,9 +7,9 @@ type Inputs = {
 };
 
 const inputClass =
-  "w-full text-xs bg-white disabled:bg-gray-300 rounded-[4px] outline-none p-4 border border-white pr-32";
+  "w-full text-xs bg-white disabled:bg-gray-300 rounded-[4px] outline-none p-4 border border-white pr-36";
 const inputErrorClass =
-  "w-full text-xs bg-white disabled:bg-gray-300 rounded-[4px] outline-none p-4 border border-red-300 pr-32";
+  "w-full text-xs bg-white disabled:bg-gray-300 rounded-[4px] outline-none p-4 border border-red-300 pr-36";
 
 export const NewsLetterForm: React.FC = (): JSX.Element => {
   const {
@@ -47,7 +47,7 @@ export const NewsLetterForm: React.FC = (): JSX.Element => {
           {/* Submit button */}
           <button
             type="submit"
-            className="absolute top-[6px] right-[4px] rounded-[4px] text-xs font-medium px-6 pt-[11px] pb-[12px] text-white bg-primary disabled:bg-primarygray"
+            className="absolute top-[6px] right-[5px] rounded-[4px] text-xs font-medium px-6 pt-[10px] pb-[12px] text-white bg-primary disabled:bg-primarygray"
             disabled={isLoading}
           >
             {isLoading ? "Please Wait..." : "Subscribe Now"}
