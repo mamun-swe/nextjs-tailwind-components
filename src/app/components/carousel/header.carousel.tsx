@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-export const FullWidthCarousel: React.FC = (): JSX.Element => {
+export const HeaderCarousel: React.FC = (): JSX.Element => {
   const heightStyleClass = "h-[240px] md:h-[400px] lg:h-[480px] 2xl:h-[600px]";
   const arrowButtonClass =
     "transition-all bg-[#0000006e] hover:bg-black text-white p-1 rounded-full";
@@ -51,16 +51,12 @@ export const FullWidthCarousel: React.FC = (): JSX.Element => {
             </button>
           )
         }
-
-        // onChange={onChange}
-        // onClickItem={onClickItem}
-        // onClickThumb={onClickThumb}
       >
         <div className={heightStyleClass}>
-          <img src="1.jpg" />
+          <img src="1.jpg" className="min-w-full min-h-full" />
         </div>
         <div className={heightStyleClass}>
-          <img src="2.jpg" />
+          <img src="2.jpg" className="min-w-full min-h-full" />
         </div>
       </Carousel>
     </div>

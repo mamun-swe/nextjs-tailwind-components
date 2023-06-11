@@ -1,11 +1,18 @@
-import { FullWidthCarousel } from "@/app/components/carousel/full-width.carousel";
+import { HeaderCarousel } from "@/app/components/carousel/header.carousel";
+import { TrainingCarousel } from "@/app/components/carousel/training.carousel";
 
 export default function Home() {
   return (
     <main className="py-4">
       <div className="container">
-        <FullWidthCarousel />
+        {/* <HeaderCarousel /> */}
       </div>
+
+      <br />
+      <br />
+      <br />
+
+      <TrainingCarousel />
     </main>
   );
 }
