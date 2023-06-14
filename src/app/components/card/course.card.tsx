@@ -20,27 +20,38 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
   const stringShortner = (data: string) => {
     let arr = data.split("");
 
-    if (arr.length > 52) {
-      return arr.splice(0, 52).join("") + "...";
+    if (data.length > 70) {
+      return data.slice(0, 70) + "...";
     }
 
     return data;
   };
 
   return (
-    <div className="cursor-pointer overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl">
+    <div className="w-[250px] cursor-pointer overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl">
       {/* Banner container */}
-      <div
+      {/* <div
         className="w-full h-60 overflow-hidden bg-cover"
         style={{ backgroundImage: `url(${props.banner})` }}
-      />
+      /> */}
 
       {/* Content container */}
       <div className="-mt-10 rounded-tl-3xl rounded-tr-3xl p-4 bg-white">
-        {/* Title & owner */}
-        <div className="flex mb-8">
+        <p className="font-bold text-md text-gray-700">
+          {props.id % 2 === 0
+            ? stringShortner(props.title)
+            : stringShortner(
+                "Become a computer engineer at home in 10 minutes. Become a computer engineer at home in 10 minutes."
+              )}
+        </p>
+
+        <p className="text-sm font-light mt-1 mb-6 text-secondary">
+          --by Jhon sina
+        </p>
+        <p className="text-md font-semibold text-primary">{props.fee} tk.</p>
+        {/* <div className="flex mb-8">
           <div className="flex-grow">
-            <p className="font-bold text-sm text-gray-700">
+            <p className="font-bold text-lg text-gray-700">
               {stringShortner(props.title)}
             </p>
             <p className="text-xs italic text-gray-400">--by Jhon sina</p>
@@ -54,10 +65,10 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Course duration, Total enrolled & Pricing */}
-        <div className="flex flex-wrap justify-end gap-2 mb-2">
+        {/* <div className="flex flex-wrap justify-end gap-2 mb-2">
           <div className="border px-[6px] py-1 rounded-md flex justify-between gap-2 text-gray-600 bg-gray-100">
             <LuClock3 size={14} />
             <p className="text-xs">{props.duration}</p>
@@ -71,17 +82,17 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
             <p className="text-xs">Fee:</p>
             <p className="text-xs font-bold">{commaNumber(props.fee)}tk</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Enroll button */}
-        <div className="text-right">
+        {/* <div className="text-right">
           <button
             type="button"
             className="rounded-md px-3 py-2 text-sm font-bold transition-all text-gray-600 bg-gray-200 hover:bg-gray-300"
           >
             এনরোল করুন
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
