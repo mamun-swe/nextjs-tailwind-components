@@ -28,12 +28,12 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
   };
 
   return (
-    <div className="w-[250px] cursor-pointer overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl">
+    <div className="w-[280px] sm:w-[300px] cursor-pointer overflow-hidden rounded-xl transition-all shadow-md hover:shadow-xl">
       {/* Banner container */}
-      {/* <div
+      <div
         className="w-full h-60 overflow-hidden bg-cover"
         style={{ backgroundImage: `url(${props.banner})` }}
-      /> */}
+      />
 
       {/* Content container */}
       <div className="-mt-10 rounded-tl-3xl rounded-tr-3xl p-4 bg-white">
@@ -44,9 +44,8 @@ export const CourseCard: React.FC<CourseCardPropsTypes> = (
                 "Become a computer engineer at home in 10 minutes. Become a computer engineer at home in 10 minutes."
               )}
         </p>
-
         <p className="text-sm font-light mt-1 mb-6 text-secondary">
-          --by Jhon sina
+          --Jhon Sina
         </p>
         <p className="text-md font-semibold text-primary">{props.fee} tk.</p>
         {/* <div className="flex mb-8">

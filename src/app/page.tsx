@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="py-4">
       {/* Category container */}
-      <div className="container mb-10 md:mb-14">
+      {/* <div className="container mb-10 md:mb-14">
         <div className="inline-flex mb-3 md:mb-4">
           <p className="text-lg md:text-2xl font-bold text-black">
             সকল ক্যাটাগরি সমূহ
@@ -27,32 +27,34 @@ export default function Home() {
             <CourseCategoryCard key={i} {...item} />
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Course list */}
       <div className="container">
-        <div className="inline-flex gap-3 mb-6 md:mb-8">
+        {/* <div className="inline-flex gap-3 mb-6 md:mb-8">
           <p className="text-lg md:text-2xl font-bold text-black">
             Language Learning courses
           </p>
 
           <p className="text-sm text-muted">(10 courses)</p>
-        </div>
+        </div> */}
 
-        <div className="flex gap-6 overflow-x-auto">
-          {data.map((item, i) => (
-            <CourseCard
-              key={i}
-              id={i + 1}
-              duration="100hr's"
-              fee={1200}
-              enrolled={120}
-              title="১০ মিনিটে কম্পিউটার ইঞ্জিনিয়ার হয়ে যান"
-              trainer_name="Mark Henry"
-              banner="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg"
-              trainer_image="https://hips.hearstapps.com/hmg-prod/images/sam-worthington-avatar-the-way-of-the-water-1670323169.jpg?crop=0.528xw:1.00xh;0.134xw,0&resize=1200:*"
-            />
-          ))}
+        <div className="w-full overflow-x-auto no-scrollbar py-6">
+          <div className="inline-flex gap-8">
+            {data.map((item, i) => (
+              <CourseCard
+                key={i}
+                id={i + 1}
+                duration="100hr's"
+                fee={1200}
+                enrolled={120}
+                title="১০ মিনিটে কম্পিউটার ইঞ্জিনিয়ার হয়ে যান"
+                trainer_name="Mark Henry"
+                banner="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg"
+                trainer_image="https://hips.hearstapps.com/hmg-prod/images/sam-worthington-avatar-the-way-of-the-water-1670323169.jpg?crop=0.528xw:1.00xh;0.134xw,0&resize=1200:*"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </main>
