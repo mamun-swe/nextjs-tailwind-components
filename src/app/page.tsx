@@ -31,13 +31,13 @@ export default function Home() {
 
       {/* Course list */}
       <div className="container">
-        {/* <div className="inline-flex gap-3 mb-6 md:mb-8">
+        <div className="inline-flex gap-3 mb-6 md:mb-8">
           <p className="text-lg md:text-2xl font-bold text-black">
             Language Learning courses
           </p>
 
           <p className="text-sm text-muted">(10 courses)</p>
-        </div> */}
+        </div>
 
         <div className="w-full overflow-x-auto no-scrollbar py-6">
           <div className="inline-flex gap-6 sm:gap-8">
