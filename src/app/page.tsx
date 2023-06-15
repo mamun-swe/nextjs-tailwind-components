@@ -1,5 +1,7 @@
 import { CourseCategoryCard } from "@/app/components/card/course-category.card";
 import { CourseCard } from "@/app/components/card/course.card";
+import Link from "next/link";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 export default function Home() {
   const data = [
@@ -12,10 +14,11 @@ export default function Home() {
     { id: 1, title: "IELTS", total_course: 30 },
     { id: 1, title: "Reasearch", total_course: 115 },
   ];
+
   return (
     <main className="py-4">
-      {/* Category container */}
-      <div className="container mb-10 md:mb-14">
+      {/* category list container */}
+      {/* <div className="container mb-10 md:mb-14">
         <div className="inline-flex mb-3 md:mb-4">
           <p className="text-lg md:text-2xl font-bold text-black">
             সকল ক্যাটাগরি সমূহ
@@ -27,23 +30,23 @@ export default function Home() {
             <CourseCategoryCard key={i} {...item} />
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* Course list & category */}
+      {/* category title & course list */}
       <div className="container">
         {Array.from(Array(4).keys()).map((item) => (
           <div className="mb-8 md:mb-12" key={item}>
             {/* Category title */}
-            <div className="inline-flex gap-3">
+            {/* <div className="inline-flex gap-3">
               <p className="text-lg md:text-2xl font-bold text-black">
                 Language Learning courses
               </p>
 
               <p className="text-sm text-muted">(10 courses)</p>
-            </div>
+            </div> */}
 
             {/* Course list */}
-            <div className="w-full overflow-x-auto no-scrollbar py-4">
+            {/* <div className="w-full overflow-x-auto no-scrollbar py-4">
               <div className="inline-flex gap-6 sm:gap-8">
                 {data.map((item, i) => (
                   <CourseCard
@@ -56,9 +59,34 @@ export default function Home() {
                   />
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
+      </div>
+
+      <div className="container">
+        <div className="flex justify-between">
+          <div className="inline-flex gap-2">
+            <p className="text-lg md:text-2xl font-bold text-black">
+              Language Learning courses
+            </p>
+
+            <p className="text-sm text-muted">(10 courses)</p>
+          </div>
+
+          <Link
+            href={`/courses/category/1`}
+            className="group inline-flex gap-2 mt-2"
+          >
+            <p className="text-sm font-medium group-hover:text-primary">
+              View all
+            </p>
+            <HiOutlineArrowNarrowRight
+              size={22}
+              className="group-hover:text-primary"
+            />
+          </Link>
+        </div>
       </div>
     </main>
   );
