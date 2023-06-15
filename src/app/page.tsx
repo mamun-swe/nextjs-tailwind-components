@@ -45,13 +45,10 @@ export default function Home() {
               <CourseCard
                 key={i}
                 id={i + 1}
-                duration="100hr's"
-                fee={1200}
-                enrolled={120}
+                fee={12000}
                 title="১০ মিনিটে কম্পিউটার ইঞ্জিনিয়ার হয়ে যান"
                 trainer_name="Mark Henry"
                 banner="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg"
-                trainer_image="https://hips.hearstapps.com/hmg-prod/images/sam-worthington-avatar-the-way-of-the-water-1670323169.jpg?crop=0.528xw:1.00xh;0.134xw,0&resize=1200:*"
               />
             ))}
           </div>
