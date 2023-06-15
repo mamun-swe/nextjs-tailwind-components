@@ -40,7 +40,7 @@ export default function Home() {
         </div> */}
 
         <div className="w-full overflow-x-auto no-scrollbar py-6">
-          <div className="inline-flex gap-8">
+          <div className="inline-flex gap-6 sm:gap-8">
             {data.map((item, i) => (
               <CourseCard
                 key={i}
