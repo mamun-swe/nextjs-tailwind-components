@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="py-4">
       {/* Category container */}
-      {/* <div className="container mb-10 md:mb-14">
+      <div className="container mb-10 md:mb-14">
         <div className="inline-flex mb-3 md:mb-4">
           <p className="text-lg md:text-2xl font-bold text-black">
             সকল ক্যাটাগরি সমূহ
@@ -27,32 +27,38 @@ export default function Home() {
             <CourseCategoryCard key={i} {...item} />
           ))}
         </div>
-      </div> */}
+      </div>
 
-      {/* Course list */}
+      {/* Course list & category */}
       <div className="container">
-        <div className="inline-flex gap-3 mb-4">
-          <p className="text-lg md:text-2xl font-bold text-black">
-            Language Learning courses
-          </p>
+        {Array.from(Array(4).keys()).map((item) => (
+          <div className="mb-8 md:mb-12" key={item}>
+            {/* Category title */}
+            <div className="inline-flex gap-3">
+              <p className="text-lg md:text-2xl font-bold text-black">
+                Language Learning courses
+              </p>
 
-          <p className="text-sm text-muted">(10 courses)</p>
-        </div>
+              <p className="text-sm text-muted">(10 courses)</p>
+            </div>
 
-        <div className="w-full overflow-x-auto no-scrollbar py-4">
-          <div className="inline-flex gap-6 sm:gap-8">
-            {data.map((item, i) => (
-              <CourseCard
-                key={i}
-                id={i + 1}
-                fee={12000}
-                title="১০ মিনিটে কম্পিউটার ইঞ্জিনিয়ার হয়ে যান"
-                trainer_name="Mark Henry"
-                banner="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg"
-              />
-            ))}
+            {/* Course list */}
+            <div className="w-full overflow-x-auto no-scrollbar py-4">
+              <div className="inline-flex gap-6 sm:gap-8">
+                {data.map((item, i) => (
+                  <CourseCard
+                    key={i}
+                    id={i + 1}
+                    fee={12000}
+                    title="১০ মিনিটে কম্পিউটার ইঞ্জিনিয়ার হয়ে যান"
+                    trainer_name="Mark Henry"
+                    banner="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </main>
   );
